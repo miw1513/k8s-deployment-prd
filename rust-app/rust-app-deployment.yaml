@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rust-app
+  name: rust-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rust-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rust-app
+    spec:
+      containers:
+        - image: "teewasza8989/rust-workshop-jumpbox:dev-0f57764"
+          name: rust-workshop-jumpbox
+          resources: {}
+          ports:
+            - containerPort: 8080
+status: {}
+
