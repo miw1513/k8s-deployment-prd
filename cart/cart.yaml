@@ -21,7 +21,6 @@ spec:
       - image: nginx:alpine
         name: nginx
         resources: {}
-        # - configMapRef:
-        #     name: cart-test
+
 
 status: {}
